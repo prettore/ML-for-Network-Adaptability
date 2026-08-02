@@ -1,0 +1,16 @@
+10.10.0.2:63872 -> 10.10.1.2:443 proto=tcp class=Web-Browsing feature_ms=0.102 predict_ms=44.376 enforce_ms=0.003 total_ms=44.480
+10.10.0.2:63873 -> 10.10.1.2:80 proto=tcp class=Web-Browsing feature_ms=0.068 predict_ms=35.665 enforce_ms=0.003 total_ms=35.736
+10.10.0.2:63874 -> 10.10.1.2:80 proto=tcp class=Web-Browsing feature_ms=0.079 predict_ms=36.384 enforce_ms=0.003 total_ms=36.466
+10.10.0.2:63875 -> 10.10.1.2:80 proto=tcp class=Web-Browsing feature_ms=0.075 predict_ms=37.407 enforce_ms=0.003 total_ms=37.485
+10.10.0.2:52313 -> 10.10.1.2:443 proto=tcp class=Web-Browsing feature_ms=0.072 predict_ms=36.596 enforce_ms=0.003 total_ms=36.671
+10.10.0.2:52315 -> 10.10.1.2:443 proto=tcp class=Delay-Sensitive feature_ms=0.081 predict_ms=36.174 enforce_ms=0.003 total_ms=36.258
+10.10.0.2:51945 -> 10.10.1.2:80 proto=tcp class=Web-Browsing feature_ms=0.077 predict_ms=37.833 enforce_ms=0.004 total_ms=37.914
+10.10.0.2:51946 -> 10.10.1.2:80 proto=tcp class=Web-Browsing feature_ms=0.069 predict_ms=46.163 enforce_ms=0.003 total_ms=46.235
+10.10.0.2:51947 -> 10.10.1.2:80 proto=tcp class=Web-Browsing feature_ms=0.070 predict_ms=36.131 enforce_ms=0.003 total_ms=36.204
+10.10.0.2:50633 -> 10.10.1.2:443 proto=tcp class=Web-Browsing feature_ms=0.086 predict_ms=36.265 enforce_ms=0.003 total_ms=36.354
+10.10.0.2:62890 -> 10.10.1.2:443 proto=tcp class=Web-Browsing feature_ms=0.127 predict_ms=47.668 enforce_ms=0.002 total_ms=47.797
+10.10.0.2:62891 -> 10.10.1.2:443 proto=tcp class=Web-Browsing feature_ms=0.075 predict_ms=36.586 enforce_ms=0.003 total_ms=36.664
+10.10.0.2:52452 -> 10.10.1.2:443 proto=udp class=Delay-Sensitive feature_ms=0.109 predict_ms=37.082 enforce_ms=0.008 total_ms=37.199
+10.10.0.2:62912 -> 10.10.1.2:443 proto=tcp class=Delay-Sensitive feature_ms=0.135 predict_ms=35.745 enforce_ms=0.003 total_ms=35.882
+10.10.0.2:62922 -> 10.10.1.2:443 proto=tcp class=Delay-Sensitive feature_ms=0.121 predict_ms=36.749 enforce_ms=0.003 total_ms=36.873
+10.10.1.1:5353 -> 224.0.0.251:5353 proto=udp class=Web-Browsing feature_ms=0.102 predict_ms=36.079 enforce_ms=0.003 total_ms=36.184

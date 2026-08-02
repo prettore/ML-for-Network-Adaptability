@@ -1,0 +1,9 @@
+# Phase 3 orchestration/evaluation dependencies (run on the host).
+# Containernet itself is not pip-installable in the usual sense: it is a
+# fork of Mininet that replaces the system `mininet` package. Install it
+# with root privileges via:
+#   git clone https://github.com/containernet/containernet.git
+#   cd containernet && sudo util/install.sh -n
+# (This host already has Docker, Mininet, and Open vSwitch; only the
+# containernet fork itself and the two images built from
+# testbed/docker/*.Dockerfile are still needed.)

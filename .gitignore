@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# Large generated artifacts (regenerate via 04-qos-testbed/phase1_train.py;
+# excluded to stay under GitHub's 100MB per-file limit)
+02-app-classification/data/data.parquet
+04-qos-testbed/models/qos_classifier.pkl
+
+# Unfetched Git LFS pointer stubs from the upstream tutorial repo (dangling
+# references GitHub rejects here since the LFS objects live in the upstream
+# repo, not this one). The 02b/02c notebooks fetch these fresh when run.
+02-app-classification/data/final_dataset_10_classes_splt.parquet
+02-app-classification/data/final_dataset_10_classes_statistical.parquet
+02-app-classification/data/final_dataset_63_classes_statistical.parquet
+
+# LaTeX build byproducts (regenerate from main.tex + references.bib).
+# Scoped to the paper directory, not a global *.log/*.out pattern, since
+# 04-qos-testbed/testbed/results/ contains real experiment logs to keep.
+04-qos-testbed/paper/*.aux
+04-qos-testbed/paper/*.bbl
+04-qos-testbed/paper/*.blg
+04-qos-testbed/paper/*.log
+04-qos-testbed/paper/*.out
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Python virtual environments
+venv/
+env/
+.env
+# Demo folder
+Demo/
