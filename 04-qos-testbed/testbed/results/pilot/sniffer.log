@@ -1,0 +1,8 @@
+10.10.0.2:51486 -> 10.10.1.2:9000 proto=tcp class=Delay-Sensitive feature_ms=0.080 predict_ms=29.163 enforce_ms=6.100 total_ms=35.343
+10.10.0.3:37876 -> 10.10.1.2:9000 proto=tcp class=Delay-Sensitive feature_ms=0.059 predict_ms=23.688 enforce_ms=5.155 total_ms=28.902
+10.10.0.3:59594 -> 10.10.1.2:10002 proto=udp class=Web-Browsing feature_ms=0.081 predict_ms=23.465 enforce_ms=6.270 total_ms=29.816
+10.10.0.4:40192 -> 10.10.1.2:9000 proto=tcp class=Delay-Sensitive feature_ms=0.050 predict_ms=23.669 enforce_ms=4.352 total_ms=28.071
+10.10.0.4:48860 -> 10.10.1.2:10003 proto=tcp class=Web-Browsing feature_ms=0.054 predict_ms=23.089 enforce_ms=3.950 total_ms=27.094
+10.10.0.2:52201 -> 10.10.1.2:10001 proto=udp class=Video-Streaming feature_ms=0.045 predict_ms=23.719 enforce_ms=3.789 total_ms=27.553
+10.10.0.5:35658 -> 10.10.1.2:9000 proto=tcp class=Delay-Sensitive feature_ms=0.044 predict_ms=22.794 enforce_ms=4.733 total_ms=27.571
+10.10.0.5:45682 -> 10.10.1.2:10004 proto=tcp class=Web-Browsing feature_ms=0.058 predict_ms=23.288 enforce_ms=3.751 total_ms=27.097

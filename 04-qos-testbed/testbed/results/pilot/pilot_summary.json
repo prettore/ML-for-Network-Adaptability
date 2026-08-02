@@ -1,0 +1,57 @@
+{
+  "qos_before_after": {
+    "Delay-Sensitive": {
+      "delay_before_ms": 1532.807,
+      "delay_after_ms": 0.095,
+      "delay_improvement_pct": 100.0,
+      "jitter_before_ms": 6.46,
+      "jitter_after_ms": 0.04,
+      "bitrate_before_kbps": 48.8,
+      "bitrate_after_kbps": 63.8,
+      "loss_before_pct": 7.53,
+      "loss_after_pct": 0.0
+    },
+    "Video-Streaming": {
+      "delay_before_ms": 1566.076,
+      "delay_after_ms": 386.488,
+      "delay_improvement_pct": 75.3,
+      "jitter_before_ms": 1.161,
+      "jitter_after_ms": 1.857,
+      "bitrate_before_kbps": 3356.9,
+      "bitrate_after_kbps": 3412.6,
+      "loss_before_pct": 6.77,
+      "loss_after_pct": 19.13
+    },
+    "Bulk-Download": {
+      "delay_before_ms": 6113.88,
+      "delay_after_ms": 4062.18,
+      "delay_improvement_pct": 33.6,
+      "jitter_before_ms": 11.211,
+      "jitter_after_ms": 16.843,
+      "bitrate_before_kbps": 1558.6,
+      "bitrate_after_kbps": 966.8,
+      "loss_before_pct": 0.0,
+      "loss_after_pct": 0.2
+    },
+    "Web-Browsing": {
+      "delay_before_ms": 2590.788,
+      "delay_after_ms": 0.144,
+      "delay_improvement_pct": 100.0,
+      "jitter_before_ms": 27.351,
+      "jitter_after_ms": 0.04,
+      "bitrate_before_kbps": 308.9,
+      "bitrate_after_kbps": 382.3,
+      "loss_before_pct": 0.0,
+      "loss_after_pct": 0.0
+    }
+  },
+  "router_latency": {
+    "n": 8,
+    "feature_ms_mean": 0.0589,
+    "predict_ms_mean": 24.109,
+    "enforce_ms_mean": 4.763,
+    "total_ms_mean": 28.931,
+    "total_ms_median": 27.821,
+    "total_ms_max": 35.343
+  }
+}
