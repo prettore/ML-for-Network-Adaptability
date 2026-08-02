@@ -3,8 +3,7 @@
 An end-to-end system that classifies network flows into 4 QoS classes from
 just their first 10 packets, and uses that classification to actively drive
 Linux traffic control (`tc`) and `iptables` on a router in real time —
-built on top of, and extending, the ["Tutorial on Network Traffic Flow
-Classification Using Machine Learning"](#[tutorial-foundation-01-03](https://github.com/FlowFrontiers/ml-flow-class-tutorial)) notebooks.
+built on top of, and extending, the [ML Flow Class Tutorial](https://github.com/FlowFrontiers/ml-flow-class-tutorial) notebooks.
 
 ## What this is
 
