@@ -6,9 +6,6 @@ Linux traffic control (`tc`) and `iptables` on a router in real time —
 built on top of, and extending, the ["Tutorial on Network Traffic Flow
 Classification Using Machine Learning"](#tutorial-foundation-01-03) notebooks.
 
-**[📄 Read the paper](04-qos-testbed/paper/main.pdf)** — 6 pages, every number
-in it is a real, reproducible measurement, not an illustrative figure.
-
 ## What this is
 
 Modern traffic is almost entirely encrypted, so a router can no longer look
