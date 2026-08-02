@@ -105,13 +105,6 @@ explainable AI for traffic classifiers. They're self-contained — each
 notebook fetches its own data and dependencies on first run. See their
 inline documentation for details.
 
-## Prior prototype
-
-An earlier, simpler prototype of this same idea (plain Mininet, no
-enforcement-mechanism validation, no paper) is preserved on the
-[`archive/pre-phase1-4-prototype`](../../tree/archive/pre-phase1-4-prototype)
-branch rather than deleted.
-
 ## Citation
 
 If you use the underlying tutorial dataset or notebooks, please cite:
