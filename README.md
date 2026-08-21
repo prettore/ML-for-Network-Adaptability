@@ -77,7 +77,7 @@ logs from a real (topologically simplified, root-not-required) Docker pilot
 run instead.
 
 **Phase 4 — Paper** (`04-qos-testbed/paper/`): `main.tex` + `references.bib`,
-compiling to the 6-page `main.pdf` linked above.
+compiling to the 9-page `main.pdf` linked above.
 
 ## Notable findings
 
@@ -95,6 +95,20 @@ compiling to the 6-page `main.pdf` linked above.
   paper documents this and uses a ground-truth-label control to separately
   validate the enforcement mechanism from the classifier (which is
   independently validated on real traffic).
+- **Design choices are tested, not guessed**: a systematic
+  one-factor-at-a-time sweep (22 independently retrained models,
+  `experiments/ablation_study.py`) checks the 10-packet feature window and
+  the deployed Random Forest's hyperparameters against the alternatives.
+  15 packets measurably beats 10 on accuracy (0.896 vs. 0.871) but costs
+  flow coverage and decision latency, which is why 10 stays the default;
+  a 50-tree variant matches the deployed model's accuracy at half the size.
+- **Why 4 QoS classes, not more or fewer**: the granularity matches WMM's
+  four 802.11e Access Categories, and a separate sweep
+  (`experiments/class_granularity_study.py`) shows macro F1 falls
+  monotonically as the taxonomy gets finer (0.904 at 2 classes, 0.843 at
+  6). Splitting Delay-Sensitive further into gaming/VoIP/network-control
+  costs accuracy without giving the router anything it could act on
+  differently, which is why we stopped at 4.
 
 ## Tutorial foundation (01–03)
 
