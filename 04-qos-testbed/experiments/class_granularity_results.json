@@ -1,0 +1,99 @@
+{
+  "2": {
+    "n_classes": 2,
+    "classes": [
+      "Best-Effort",
+      "Latency-Critical"
+    ],
+    "class_distribution": {
+      "Best-Effort": 286474,
+      "Latency-Critical": 143123
+    },
+    "macro_f1": 0.9039072774030645,
+    "accuracy": 0.9144212771514386,
+    "per_class_f1": {
+      "Best-Effort": 0.9356927907889572,
+      "Latency-Critical": 0.8721217640171719
+    },
+    "pickle_mb": 150.043402,
+    "train_seconds": 26.269463062286377
+  },
+  "3": {
+    "n_classes": 3,
+    "classes": [
+      "Best-Effort",
+      "Delay-Sensitive",
+      "Video-Streaming"
+    ],
+    "class_distribution": {
+      "Best-Effort": 286474,
+      "Delay-Sensitive": 88996,
+      "Video-Streaming": 54127
+    },
+    "macro_f1": 0.8781597885962112,
+    "accuracy": 0.9029258856244711,
+    "per_class_f1": {
+      "Best-Effort": 0.9278402825889677,
+      "Delay-Sensitive": 0.9169217071949252,
+      "Video-Streaming": 0.7897173760047412
+    },
+    "pickle_mb": 174.931426,
+    "train_seconds": 30.132196187973022
+  },
+  "4": {
+    "n_classes": 4,
+    "classes": [
+      "Bulk-Download",
+      "Delay-Sensitive",
+      "Video-Streaming",
+      "Web-Browsing"
+    ],
+    "class_distribution": {
+      "Web-Browsing": 248863,
+      "Delay-Sensitive": 88996,
+      "Video-Streaming": 54127,
+      "Bulk-Download": 37611
+    },
+    "macro_f1": 0.8705720463712143,
+    "accuracy": 0.9080246610336019,
+    "per_class_f1": {
+      "Bulk-Download": 0.811376957816854,
+      "Delay-Sensitive": 0.9411022429729644,
+      "Video-Streaming": 0.800274200656123,
+      "Web-Browsing": 0.9295347840389159
+    },
+    "pickle_mb": 236.278522,
+    "train_seconds": 30.098241806030273
+  },
+  "6": {
+    "n_classes": 6,
+    "classes": [
+      "Bulk-Download",
+      "Interactive-Gaming",
+      "Network-Control",
+      "Real-Time-Communication",
+      "Video-Streaming",
+      "Web-Browsing"
+    ],
+    "class_distribution": {
+      "Web-Browsing": 248863,
+      "Video-Streaming": 54127,
+      "Real-Time-Communication": 38700,
+      "Bulk-Download": 37611,
+      "Network-Control": 36365,
+      "Interactive-Gaming": 13931
+    },
+    "macro_f1": 0.8430000883297741,
+    "accuracy": 0.8834999746231539,
+    "per_class_f1": {
+      "Bulk-Download": 0.8254998429812624,
+      "Interactive-Gaming": 0.798197436980707,
+      "Network-Control": 0.8341232227488151,
+      "Real-Time-Communication": 0.8815655277919429,
+      "Video-Streaming": 0.8005295675198588,
+      "Web-Browsing": 0.9180849319560583
+    },
+    "pickle_mb": 265.347722,
+    "train_seconds": 27.146416425704956
+  }
+}

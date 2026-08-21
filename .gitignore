@@ -46,3 +46,7 @@ env/
 # Demo folder
 Demo/
 04-qos-testbed/paper/
+Lab_Seminar_Ali_.pdf
+# Persian study guide (personal, not for git)
+Raahnama_Farsi_Kamel.pdf
+*.pcap

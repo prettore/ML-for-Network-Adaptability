@@ -39,6 +39,7 @@ best-effort).
   testbed/                  Phase 3: Containernet topology, D-ITG traffic profiles, evaluation
   paper/                    Phase 4: the LaTeX paper (main.tex, references.bib, main.pdf)
   models/                   trained model metadata + metrics (the model .pkl itself is gitignored, see below)
+  experiments/              ablation studies: hyperparameters/feature-window (ablation_study.py) + QoS class granularity (class_granularity_study.py), with real results JSON
 
 01-data-collection/      <- tutorial: NFStream flow metering, SPLT, nDPI labeling
 02-app-classification/   <- tutorial: data preparation + comparative ML modeling
