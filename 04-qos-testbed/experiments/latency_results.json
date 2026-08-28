@@ -1,0 +1,113 @@
+{
+  "config": {
+    "n_packets_grid": [
+      5,
+      8,
+      10,
+      12,
+      15,
+      20
+    ],
+    "deployed_rf": {
+      "n_estimators": 100,
+      "max_depth": 22,
+      "min_samples_leaf": 3
+    },
+    "n_samples_per_point": 300,
+    "n_warmup": 10,
+    "random_state": 42,
+    "note": "Single-flow calls, never batched, matching the live sniffer's one-flow-at-a-time call pattern. tc/iptables enforcement latency is not re-measured here; it is independent of n_packets (see Table 7 of the paper)."
+  },
+  "latency_by_n_packets": {
+    "5": {
+      "n_samples": 300,
+      "feature_extraction_ms": {
+        "mean": 0.28938145861805725,
+        "median": 0.2858505176845938
+      },
+      "model_inference_ms": {
+        "mean": 11.884510326587284,
+        "median": 11.821710999356583
+      },
+      "total_ms": {
+        "mean": 12.173891785205342,
+        "median": 12.086645001545548
+      }
+    },
+    "8": {
+      "n_samples": 300,
+      "feature_extraction_ms": {
+        "mean": 0.2702804086341833,
+        "median": 0.2650055103003979
+      },
+      "model_inference_ms": {
+        "mean": 12.44215144465367,
+        "median": 11.86757700634189
+      },
+      "total_ms": {
+        "mean": 12.712431853287853,
+        "median": 12.141104496549815
+      }
+    },
+    "10": {
+      "n_samples": 300,
+      "feature_extraction_ms": {
+        "mean": 0.2756354263207565,
+        "median": 0.26497250655665994
+      },
+      "model_inference_ms": {
+        "mean": 12.557481735517891,
+        "median": 11.912623973330483
+      },
+      "total_ms": {
+        "mean": 12.833117161838649,
+        "median": 12.186045467387885
+      }
+    },
+    "12": {
+      "n_samples": 300,
+      "feature_extraction_ms": {
+        "mean": 0.26672090132099885,
+        "median": 0.2605389745440334
+      },
+      "model_inference_ms": {
+        "mean": 11.947263484277451,
+        "median": 11.898430966539308
+      },
+      "total_ms": {
+        "mean": 12.213984385598451,
+        "median": 12.15254599810578
+      }
+    },
+    "15": {
+      "n_samples": 300,
+      "feature_extraction_ms": {
+        "mean": 0.2598210492093737,
+        "median": 0.24681599461473525
+      },
+      "model_inference_ms": {
+        "mean": 11.811550181979934,
+        "median": 11.808596493210644
+      },
+      "total_ms": {
+        "mean": 12.071371231189309,
+        "median": 12.063198519172147
+      }
+    },
+    "20": {
+      "n_samples": 300,
+      "feature_extraction_ms": {
+        "mean": 0.2586104371584952,
+        "median": 0.25034399004653096
+      },
+      "model_inference_ms": {
+        "mean": 11.843135304322155,
+        "median": 11.824874993180856
+      },
+      "total_ms": {
+        "mean": 12.10174574148065,
+        "median": 12.079759064363316
+      }
+    }
+  }
+}
