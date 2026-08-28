@@ -39,7 +39,7 @@ best-effort).
   testbed/                  Phase 3: Containernet topology, D-ITG traffic profiles, evaluation
   paper/                    Phase 4: the LaTeX paper (main.tex, references.bib, main.pdf)
   models/                   trained model metadata + metrics (the model .pkl itself is gitignored, see below)
-  experiments/              ablation studies: hyperparameters/feature-window (ablation_study.py), per-window latency (latency_study.py) + QoS class granularity (class_granularity_study.py), with real results JSON
+  experiments/              ablation studies: hyperparameters/feature-window (ablation_study.py), per-window compute latency (latency_study.py), real per-window wait time (decision_delay_study.py) + QoS class granularity (class_granularity_study.py), with real results JSON
 
 01-data-collection/      <- tutorial: NFStream flow metering, SPLT, nDPI labeling
 02-app-classification/   <- tutorial: data preparation + comparative ML modeling
@@ -102,13 +102,12 @@ compiling to the 9-page `main.pdf` linked above.
   15 packets measurably beats 10 on accuracy (0.896 vs. 0.871) but costs
   flow coverage and decision latency, which is why 10 stays the default;
   a 50-tree variant matches the deployed model's accuracy at half the size.
-- **Latency doesn't move with packet count, coverage and wait time do**:
-  `experiments/latency_study.py` times feature extraction + inference
-  one flow at a time (matching the live sniffer) at every window size
-  from 5 to 20 packets. Total compute latency stays flat at ~12 ms
-  regardless of window size, so the case for 10 packets over 15 is about
-  how long a flow takes to arrive and how many short flows never reach
-  the window at all, not about model speed.
+- **How much real time does 10 vs. 15 packets actually cost?** `experiments/decision_delay_study.py`
+  sums real measured inter-arrival times (not a simulated packet rate)
+  to compute how long a router really waits for `n_packets` to arrive.
+  For Delay-Sensitive traffic, the median flow is classifiable in 43 ms
+  at 10 packets versus 88 ms at 15, roughly double, for only 2.5 points
+  of extra macro F1. That's the concrete cost behind "why 10 not 15."
 - **Why 4 QoS classes, not more or fewer**: the granularity matches WMM's
   four 802.11e Access Categories, and a separate sweep
   (`experiments/class_granularity_study.py`) shows macro F1 falls

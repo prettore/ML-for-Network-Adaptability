@@ -1,0 +1,221 @@
+{
+  "config": {
+    "n_packets_grid": [
+      5,
+      8,
+      10,
+      12,
+      15,
+      20
+    ],
+    "compute_latency_ms": 12.6,
+    "full_pipeline_latency_ms": 28.9,
+    "note": "wait_ms is the sum of real measured inter-arrival gaps (splt_piat_ms) from packet 1 to packet n_packets for each real flow, i.e. true wall-clock time before a router could even attempt classification, not simulated or estimated from a fixed packet rate."
+  },
+  "results_by_n_packets": {
+    "5": {
+      "overall": {
+        "n_flows": 475401,
+        "median_ms": 28.0,
+        "mean_ms": 1247.2845492542085,
+        "p90_ms": 288.0
+      },
+      "per_class": {
+        "Bulk-Download": {
+          "n_flows": 48379,
+          "median_ms": 62.0,
+          "mean_ms": 2347.681948779429,
+          "p90_ms": 533.0
+        },
+        "Delay-Sensitive": {
+          "n_flows": 95239,
+          "median_ms": 25.0,
+          "mean_ms": 1485.6528312981027,
+          "p90_ms": 471.0
+        },
+        "Video-Streaming": {
+          "n_flows": 56528,
+          "median_ms": 24.0,
+          "mean_ms": 110.42230399094254,
+          "p90_ms": 96.0
+        },
+        "Web-Browsing": {
+          "n_flows": 275255,
+          "median_ms": 27.0,
+          "mean_ms": 1204.8746616773537,
+          "p90_ms": 244.0
+        }
+      }
+    },
+    "8": {
+      "overall": {
+        "n_flows": 456793,
+        "median_ms": 42.0,
+        "mean_ms": 2221.582640276887,
+        "p90_ms": 486.0
+      },
+      "per_class": {
+        "Bulk-Download": {
+          "n_flows": 45672,
+          "median_ms": 101.0,
+          "mean_ms": 5311.285360833771,
+          "p90_ms": 15040.0
+        },
+        "Delay-Sensitive": {
+          "n_flows": 91278,
+          "median_ms": 37.0,
+          "mean_ms": 2656.1912837704594,
+          "p90_ms": 1030.0
+        },
+        "Video-Streaming": {
+          "n_flows": 55906,
+          "median_ms": 36.0,
+          "mean_ms": 174.43630379565698,
+          "p90_ms": 138.0
+        },
+        "Web-Browsing": {
+          "n_flows": 263937,
+          "median_ms": 43.0,
+          "mean_ms": 1970.2524087187473,
+          "p90_ms": 339.0
+        }
+      }
+    },
+    "10": {
+      "overall": {
+        "n_flows": 429597,
+        "median_ms": 49.0,
+        "mean_ms": 2947.240669743969,
+        "p90_ms": 547.0
+      },
+      "per_class": {
+        "Bulk-Download": {
+          "n_flows": 37611,
+          "median_ms": 104.0,
+          "mean_ms": 6608.793890085348,
+          "p90_ms": 22054.0
+        },
+        "Delay-Sensitive": {
+          "n_flows": 88996,
+          "median_ms": 43.0,
+          "mean_ms": 3259.2976875365184,
+          "p90_ms": 1213.0
+        },
+        "Video-Streaming": {
+          "n_flows": 54127,
+          "median_ms": 43.0,
+          "mean_ms": 1166.9381454726847,
+          "p90_ms": 244.0
+        },
+        "Web-Browsing": {
+          "n_flows": 248863,
+          "median_ms": 49.0,
+          "mean_ms": 2669.481140225747,
+          "p90_ms": 391.0
+        }
+      }
+    },
+    "12": {
+      "overall": {
+        "n_flows": 406824,
+        "median_ms": 60.0,
+        "mean_ms": 3271.665403221049,
+        "p90_ms": 693.0
+      },
+      "per_class": {
+        "Bulk-Download": {
+          "n_flows": 33064,
+          "median_ms": 101.0,
+          "mean_ms": 4726.046213404306,
+          "p90_ms": 1138.0
+        },
+        "Delay-Sensitive": {
+          "n_flows": 82513,
+          "median_ms": 59.0,
+          "mean_ms": 3171.624495534037,
+          "p90_ms": 1063.0
+        },
+        "Video-Streaming": {
+          "n_flows": 52229,
+          "median_ms": 53.0,
+          "mean_ms": 4006.6540236267206,
+          "p90_ms": 15053.0
+        },
+        "Web-Browsing": {
+          "n_flows": 239018,
+          "median_ms": 59.0,
+          "mean_ms": 2944.4068187333173,
+          "p90_ms": 417.0
+        }
+      }
+    },
+    "15": {
+      "overall": {
+        "n_flows": 384812,
+        "median_ms": 83.0,
+        "mean_ms": 4779.81760444061,
+        "p90_ms": 1988.0
+      },
+      "per_class": {
+        "Bulk-Download": {
+          "n_flows": 30833,
+          "median_ms": 130.0,
+          "mean_ms": 5054.195666980184,
+          "p90_ms": 1079.7999999999993
+        },
+        "Delay-Sensitive": {
+          "n_flows": 74962,
+          "median_ms": 88.0,
+          "mean_ms": 3528.2521410848162,
+          "p90_ms": 1568.0
+        },
+        "Video-Streaming": {
+          "n_flows": 49128,
+          "median_ms": 74.0,
+          "mean_ms": 7692.6722032242305,
+          "p90_ms": 19408.300000000003
+        },
+        "Web-Browsing": {
+          "n_flows": 229889,
+          "median_ms": 81.0,
+          "mean_ms": 4528.640865809151,
+          "p90_ms": 853.2000000000116
+        }
+      }
+    },
+    "20": {
+      "overall": {
+        "n_flows": 334740,
+        "median_ms": 134.0,
+        "mean_ms": 8751.224989544124,
+        "p90_ms": 12177.0
+      },
+      "per_class": {
+        "Bulk-Download": {
+          "n_flows": 26538,
+          "median_ms": 216.0,
+          "mean_ms": 11801.983231592434,
+          "p90_ms": 60614.6
+        },
+        "Delay-Sensitive": {
+          "n_flows": 67121,
+          "median_ms": 173.0,
+          "mean_ms": 7568.255702388225,
+          "p90_ms": 6765.0
+        },
+        "Video-Streaming": {
+          "n_flows": 40967,
+          "median_ms": 96.0,
+          "mean_ms": 9325.344277101081,
+          "p90_ms": 19451.000000000007
+        },
+        "Web-Browsing": {
+          "n_flows": 200114,
+          "median_ms": 125.0,
+          "mean_ms": 8625.901995862358,
+          "p90_ms": 10170.0
+        }
+      }
+    }
+  }
+}
