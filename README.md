@@ -37,9 +37,17 @@ best-effort).
   phase1_train.py           Phase 1: dataset prep + model training
   router/                   Phase 2: real-time sniffer + tc/iptables enforcement
   testbed/                  Phase 3: Containernet topology, D-ITG traffic profiles, evaluation
-  paper/                    Phase 4: the LaTeX paper (main.tex, references.bib, main.pdf)
+  paper/                    Phase 4: main.tex (standalone paper) + Lab/ (the same content in the
+                               university Lab-report format, main_lab.tex) + references.bib
   models/                   trained model metadata + metrics (the model .pkl itself is gitignored, see below)
-  experiments/              ablation studies: hyperparameters/feature-window (ablation_study.py), per-window compute latency (latency_study.py), real per-window wait time (decision_delay_study.py) + QoS class granularity (class_granularity_study.py), with real results JSON
+  experiments/              ablation studies: hyperparameters/feature-window (ablation_study.py), real
+                               per-window wait time (decision_delay_study.py), QoS class granularity
+                               (class_granularity_study.py), synthetic-generator comparison
+                               (synthetic_generator_comparison.py), external dataset validation
+                               (cesnet_external_eval.py), plus a per-window compute-latency benchmark
+                               (latency_study.py, superseded in the paper by decision_delay_study.py's
+                               real wait-time numbers but kept for reference), with real results JSON
+                               and requirements-experiments.txt for the two new scripts' extra deps
 
 01-data-collection/      <- tutorial: NFStream flow metering, SPLT, nDPI labeling
 02-app-classification/   <- tutorial: data preparation + comparative ML modeling
@@ -77,7 +85,10 @@ logs from a real (topologically simplified, root-not-required) Docker pilot
 run instead.
 
 **Phase 4 — Paper** (`04-qos-testbed/paper/`): `main.tex` + `references.bib`,
-compiling to the 9-page `main.pdf` linked above.
+compiling to the 11-page `main.pdf` (10 pages of content, 1 of
+references). The same content also exists as `Lab/*.tex` +
+`main_lab.tex`, split into per-section files in the ACM format required
+for the university Lab-report submission, compiling to `main_lab.pdf`.
 
 ## Notable findings
 
@@ -115,6 +126,23 @@ compiling to the 9-page `main.pdf` linked above.
   6). Splitting Delay-Sensitive further into gaming/VoIP/network-control
   costs accuracy without giving the router anything it could act on
   differently, which is why we stopped at 4.
+- **No synthetic traffic generator resembles a real handshake**:
+  `experiments/synthetic_generator_comparison.py` compares D-ITG, MGEN,
+  and `iperf3` against real traffic on first-10-packet size variance.
+  D-ITG and MGEN, given the identical profile, are structurally
+  identical (variance = 0) and both get misclassified the same way.
+  `iperf3`'s TCP handshake gets numerically closer to real traffic's
+  variance, but it's still the wrong shape (generic TCP setup, not a TLS
+  handshake) and still gets misclassified. None of the three operates
+  above the transport layer, so none can be tuned into looking real.
+- **Cross-network generalization is a real, disclosed limitation**:
+  evaluating the unchanged, unretrained deployed model on
+  [CESNET-TLS22](https://www.liberouter.org/technology-v2/tools-services-datasets/datasets/cesnet-tls22/),
+  a real dataset from a different network
+  (`experiments/cesnet_external_eval.py`), drops macro F1 from 0.871 to
+  0.208. Web-Browsing (the majority class) is still recognized well; the
+  other three collapse. We report this honestly as a boundary on what
+  the headline 0.871 actually claims, not something to hide.
 
 ## Tutorial foundation (01–03)
 

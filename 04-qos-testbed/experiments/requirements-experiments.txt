@@ -1,0 +1,13 @@
+# Extra dependencies for the experiments in this folder, on top of
+# ../requirements-phase1.txt (pandas, numpy, scikit-learn, pyarrow), which
+# ablation_study.py, class_granularity_study.py, decision_delay_study.py,
+# and latency_study.py already need.
+
+# cesnet_external_eval.py: reads the CESNET-TLS22-XS HDF5 file directly.
+tables>=3.9.0
+# cesnet_external_eval.py's one-time dataset download step (see the
+# script's own docstring); not imported by the script itself at eval time.
+cesnet-datazoo
+
+# synthetic_generator_comparison.py: parses the captured pcaps.
+scapy>=2.5.0

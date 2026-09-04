@@ -1,0 +1,56 @@
+{
+  "n_days_sampled": 1,
+  "n_flows": 825385,
+  "class_distribution": {
+    "Web-Browsing": 518192,
+    "Video-Streaming": 127243,
+    "Bulk-Download": 108263,
+    "Delay-Sensitive": 71687
+  },
+  "macro_f1": 0.20795396291941223,
+  "accuracy": 0.6105381125171889,
+  "per_class_f1": {
+    "Bulk-Download": 1.8469437697969285e-05,
+    "Delay-Sensitive": 0.0363660961915714,
+    "Video-Streaming": 0.03700211175009629,
+    "Web-Browsing": 0.7584291742982833
+  },
+  "per_class_precision": {
+    "Bulk-Download": 0.041666666666666664,
+    "Delay-Sensitive": 0.6032315978456014,
+    "Video-Streaming": 0.11935055477016665,
+    "Web-Browsing": 0.6249115392790607
+  },
+  "per_class_recall": {
+    "Bulk-Download": 9.23676602347986e-06,
+    "Delay-Sensitive": 0.018748169124108975,
+    "Video-Streaming": 0.02189511407307278,
+    "Web-Browsing": 0.9645035044925433
+  },
+  "confusion_matrix": {
+    "Bulk-Download": {
+      "Bulk-Download": 1,
+      "Delay-Sensitive": 0,
+      "Video-Streaming": 4,
+      "Web-Browsing": 19
+    },
+    "Delay-Sensitive": {
+      "Bulk-Download": 66,
+      "Delay-Sensitive": 1344,
+      "Video-Streaming": 192,
+      "Web-Browsing": 626
+    },
+    "Video-Streaming": {
+      "Bulk-Download": 2255,
+      "Delay-Sensitive": 553,
+      "Video-Streaming": 2786,
+      "Web-Browsing": 17749
+    },
+    "Web-Browsing": {
+      "Bulk-Download": 105941,
+      "Delay-Sensitive": 69790,
+      "Video-Streaming": 124261,
+      "Web-Browsing": 499798
+    }
+  }
+}
